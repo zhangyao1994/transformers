@@ -10,6 +10,7 @@ from tqdm import tqdm
 from ...file_utils import is_tf_available, is_torch_available
 from ...tokenization_bert import whitespace_tokenize
 from ...tokenization_utils_base import TruncationStrategy
+from  ...hf_logging import get_verbosity
 from .utils import DataProcessor
 
 
@@ -301,7 +302,7 @@ def squad_convert_examples_to_features(
     padding_strategy="max_length",
     return_dataset=False,
     threads=1,
-    tqdm_enabled=True,
+    tqdm_enabled=None,
 ):
     """
     Converts a list of examples into a list of features that can be directly given as input to a model.
@@ -338,6 +339,9 @@ def squad_convert_examples_to_features(
             is_training=not evaluate,
         )
     """
+
+    if tqdm_enabled is None:
+        tqdm_enabled = get_verbosity() <= logging.INFO
 
     # Defining helper methods
     features = []
