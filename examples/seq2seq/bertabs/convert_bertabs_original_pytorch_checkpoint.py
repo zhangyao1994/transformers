@@ -20,18 +20,18 @@ the model within the original codebase to be able to only save its `state_dict`.
 """
 
 import argparse
-import logging
 from collections import namedtuple
 
 import torch
 
+import hf_logging
 from model_bertabs import BertAbsSummarizer
 from models.model_builder import AbsSummarizer  # The authors' implementation
 from transformers import BertTokenizer
 
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+logger = hf_logging.get_logger()
+hf_logging.set_verbosity(hf_logging.INFO)
 
 
 SAMPLE_TEXT = "Hello world! cécé herlolip"

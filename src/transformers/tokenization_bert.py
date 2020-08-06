@@ -16,18 +16,19 @@
 
 
 import collections
-import logging
 import os
 import unicodedata
 from typing import List, Optional
 
 from tokenizers import BertWordPieceTokenizer
 
+import hf_logging
+
 from .tokenization_utils import PreTrainedTokenizer, _is_control, _is_punctuation, _is_whitespace
 from .tokenization_utils_fast import PreTrainedTokenizerFast
 
 
-logger = logging.getLogger(__name__)
+logger = hf_logging.get_logger()
 
 VOCAB_FILES_NAMES = {"vocab_file": "vocab.txt"}
 

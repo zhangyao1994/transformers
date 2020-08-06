@@ -18,11 +18,12 @@
 
 import copy
 import itertools
-import logging
 import math
 import warnings
 
 import tensorflow as tf
+
+import hf_logging
 
 from .configuration_t5 import T5Config
 from .file_utils import DUMMY_INPUTS, DUMMY_MASK, add_start_docstrings, add_start_docstrings_to_callable
@@ -37,7 +38,7 @@ from .modeling_tf_utils import (
 from .tokenization_utils import BatchEncoding
 
 
-logger = logging.getLogger(__name__)
+logger = hf_logging.get_logger()
 
 _TOKENIZER_FOR_DOC = "T5Tokenizer"
 

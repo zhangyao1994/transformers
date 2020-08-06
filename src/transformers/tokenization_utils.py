@@ -17,10 +17,11 @@
 """
 
 import itertools
-import logging
 import re
 import unicodedata
 from typing import Any, Dict, List, Optional, Tuple, Union
+
+import hf_logging
 
 from .file_utils import add_end_docstrings
 from .tokenization_utils_base import (
@@ -42,7 +43,7 @@ from .tokenization_utils_base import (
 )
 
 
-logger = logging.getLogger(__name__)
+logger = hf_logging.get_logger()
 
 
 def _is_whitespace(char):

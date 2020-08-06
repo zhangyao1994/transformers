@@ -16,18 +16,19 @@
 
 
 import json
-import logging
 import os
 import re
 
 from tokenizers import CharBPETokenizer
+
+import hf_logging
 
 from .tokenization_bert import BasicTokenizer
 from .tokenization_utils import PreTrainedTokenizer
 from .tokenization_utils_fast import PreTrainedTokenizerFast
 
 
-logger = logging.getLogger(__name__)
+logger = hf_logging.get_logger()
 
 VOCAB_FILES_NAMES = {
     "vocab_file": "vocab.json",

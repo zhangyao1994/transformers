@@ -16,12 +16,8 @@
 """ RoBERTa configuration """
 
 
-import logging
-
 from .configuration_bert import BertConfig
 
-
-logger = logging.getLogger(__name__)
 
 ROBERTA_PRETRAINED_CONFIG_ARCHIVE_MAP = {
     "roberta-base": "https://s3.amazonaws.com/models.huggingface.co/bert/roberta-base-config.json",

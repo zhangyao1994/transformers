@@ -1,5 +1,3 @@
-import logging
-
 import tensorflow as tf
 
 from transformers import ElectraConfig
@@ -16,8 +14,6 @@ from .modeling_tf_utils import (
 )
 from .tokenization_utils import BatchEncoding
 
-
-logger = logging.getLogger(__name__)
 
 _TOKENIZER_FOR_DOC = "ElectraTokenizer"
 

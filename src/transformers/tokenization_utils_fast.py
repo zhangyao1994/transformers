@@ -16,7 +16,6 @@
     For slow (python) tokenizers see tokenization_utils.py
 """
 
-import logging
 import os
 from collections import defaultdict
 from typing import Any, Dict, List, Optional, Tuple, Union
@@ -24,6 +23,8 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 from tokenizers import Encoding as EncodingFast
 from tokenizers.decoders import Decoder as DecoderFast
 from tokenizers.implementations import BaseTokenizer as BaseTokenizerFast
+
+import hf_logging
 
 from .file_utils import add_end_docstrings
 from .tokenization_utils_base import (
@@ -40,7 +41,7 @@ from .tokenization_utils_base import (
 )
 
 
-logger = logging.getLogger(__name__)
+logging = hf_logging.get_logger()
 
 
 @add_end_docstrings(

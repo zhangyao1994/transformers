@@ -1,4 +1,3 @@
-import logging
 import os
 import time
 from dataclasses import dataclass, field
@@ -9,6 +8,8 @@ import torch
 from filelock import FileLock
 from torch.utils.data.dataset import Dataset
 
+import hf_logging
+
 from ...tokenization_bart import BartTokenizer, BartTokenizerFast
 from ...tokenization_roberta import RobertaTokenizer, RobertaTokenizerFast
 from ...tokenization_utils import PreTrainedTokenizer
@@ -17,7 +18,7 @@ from ..processors.glue import glue_convert_examples_to_features, glue_output_mod
 from ..processors.utils import InputFeatures
 
 
-logger = logging.getLogger(__name__)
+logger = hf_logging.get_logger()
 
 
 @dataclass

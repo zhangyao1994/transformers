@@ -16,8 +16,6 @@
 """ TF 2.0 CamemBERT model. """
 
 
-import logging
-
 from .configuration_camembert import CamembertConfig
 from .file_utils import add_start_docstrings
 from .modeling_tf_roberta import (
@@ -29,8 +27,6 @@ from .modeling_tf_roberta import (
     TFRobertaModel,
 )
 
-
-logger = logging.getLogger(__name__)
 
 TF_CAMEMBERT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     # See all CamemBERT models at https://huggingface.co/models?filter=camembert

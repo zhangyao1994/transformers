@@ -16,7 +16,6 @@
 
 
 import copy
-import logging
 import math
 import os
 import warnings
@@ -38,7 +37,8 @@ from .modeling_outputs import BaseModelOutput, BaseModelOutputWithPast, Seq2SeqL
 from .modeling_utils import PreTrainedModel, find_pruneable_heads_and_indices, prune_linear_layer
 
 
-logger = logging.getLogger(__name__)
+import hf_logging
+logger = hf_logging.get_logger()
 
 _CONFIG_FOR_DOC = "T5Config"
 _TOKENIZER_FOR_DOC = "T5Tokenizer"

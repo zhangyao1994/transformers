@@ -1,4 +1,3 @@
-import logging
 import os
 import warnings
 from dataclasses import dataclass
@@ -29,7 +28,8 @@ from .modeling_outputs import (
 from .modeling_utils import SequenceSummary
 
 
-logger = logging.getLogger(__name__)
+import hf_logging
+logger = hf_logging.get_logger()
 
 _CONFIG_FOR_DOC = "ElectraConfig"
 _TOKENIZER_FOR_DOC = "ElectraTokenizer"

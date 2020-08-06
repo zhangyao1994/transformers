@@ -18,7 +18,6 @@
 """
 
 
-import logging
 import timeit
 from typing import Callable, Optional
 
@@ -49,7 +48,8 @@ if is_py3nvml_available():
     import py3nvml.py3nvml as nvml
 
 
-logger = logging.getLogger(__name__)
+import hf_logging
+logger = hf_logging.get_logger()
 
 
 class PyTorchBenchmark(Benchmark):

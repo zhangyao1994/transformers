@@ -16,7 +16,6 @@
 
 
 import argparse
-import logging
 import os
 from pathlib import Path
 
@@ -24,6 +23,7 @@ import fairseq
 import torch
 from packaging import version
 
+import hf_logging
 from transformers import (
     BartConfig,
     BartForConditionalGeneration,
@@ -40,8 +40,7 @@ if version.parse(fairseq.__version__) < version.parse("0.9.0"):
     raise Exception("requires fairseq >= 0.9.0")
 
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+hf_logging.set_verbosity(hf_logging.INFO)
 
 SAMPLE_TEXT = " Hello world! cécé herlolip"
 

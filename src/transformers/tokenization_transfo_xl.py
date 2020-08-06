@@ -19,7 +19,6 @@
 
 
 import glob
-import logging
 import os
 import pickle
 import re
@@ -43,7 +42,8 @@ if is_torch_available():
     import torch
 
 
-logger = logging.getLogger(__name__)
+import hf_logging
+logger = hf_logging.get_logger()
 
 VOCAB_FILES_NAMES = {"pretrained_vocab_file": "vocab.bin", "vocab_file": "vocab.txt"}
 VOCAB_FILES_NAMES_FAST = {"pretrained_vocab_file": "vocab.json", "vocab_file": "vocab.json"}

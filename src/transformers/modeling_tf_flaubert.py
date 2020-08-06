@@ -15,7 +15,6 @@
 """ TF 2.0 Flaubert model.
 """
 
-import logging
 import random
 
 import tensorflow as tf
@@ -36,8 +35,6 @@ from .modeling_tf_xlm import (
 )
 from .tokenization_utils import BatchEncoding
 
-
-logger = logging.getLogger(__name__)
 
 TF_FLAUBERT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     # See all Flaubert models at https://huggingface.co/models?filter=flaubert

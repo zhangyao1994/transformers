@@ -18,7 +18,6 @@
 """
 
 
-import logging
 import random
 import timeit
 from functools import wraps
@@ -50,7 +49,8 @@ if is_tf_available():
 if is_py3nvml_available():
     import py3nvml.py3nvml as nvml
 
-logger = logging.getLogger(__name__)
+import hf_logging
+logger = hf_logging.get_logger()
 
 
 def run_with_tf_optimizations(do_eager_mode: bool, use_xla: bool):

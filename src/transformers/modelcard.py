@@ -17,7 +17,6 @@
 
 import copy
 import json
-import logging
 import os
 
 from .configuration_auto import ALL_PRETRAINED_CONFIG_ARCHIVE_MAP
@@ -32,7 +31,8 @@ from .file_utils import (
 )
 
 
-logger = logging.getLogger(__name__)
+import hf_logging
+logger = hf_logging.get_logger()
 
 
 class ModelCard:

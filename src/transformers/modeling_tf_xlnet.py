@@ -17,8 +17,6 @@
 """
 
 
-import logging
-
 import numpy as np
 import tensorflow as tf
 
@@ -44,8 +42,6 @@ from .modeling_tf_utils import (
 )
 from .tokenization_utils import BatchEncoding
 
-
-logger = logging.getLogger(__name__)
 
 _TOKENIZER_FOR_DOC = "XLNetTokenizer"
 

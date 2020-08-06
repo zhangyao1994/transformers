@@ -15,7 +15,6 @@
 """ Tokenization classes for XLNet model."""
 
 
-import logging
 import os
 import unicodedata
 from shutil import copyfile
@@ -24,7 +23,8 @@ from typing import List, Optional
 from .tokenization_utils import PreTrainedTokenizer
 
 
-logger = logging.getLogger(__name__)
+import hf_logging
+logger = hf_logging.get_logger()
 
 VOCAB_FILES_NAMES = {"vocab_file": "spiece.model"}
 

@@ -15,11 +15,12 @@
 # limitations under the License.
 """ GLUE processors and helpers """
 
-import logging
 import os
 from dataclasses import asdict
 from enum import Enum
 from typing import List, Optional, Union
+
+import hf_logging
 
 from ...file_utils import is_tf_available
 from ...tokenization_utils import PreTrainedTokenizer
@@ -29,7 +30,7 @@ from .utils import DataProcessor, InputExample, InputFeatures
 if is_tf_available():
     import tensorflow as tf
 
-logger = logging.getLogger(__name__)
+logger = hf_logging.get_logger()
 
 
 def glue_convert_examples_to_features(

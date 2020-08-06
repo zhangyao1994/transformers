@@ -15,7 +15,6 @@
 # limitations under the License.
 """PyTorch REFORMER model. """
 
-import logging
 import sys
 from collections import namedtuple
 from dataclasses import dataclass
@@ -28,6 +27,8 @@ import torch
 from torch import nn
 from torch.autograd.function import Function
 from torch.nn import CrossEntropyLoss, MSELoss
+
+import hf_logging
 
 from .activations import gelu, gelu_fast, gelu_new, swish
 from .configuration_reformer import ReformerConfig
@@ -43,7 +44,7 @@ from .modeling_outputs import CausalLMOutput, MaskedLMOutput, QuestionAnsweringM
 from .modeling_utils import PreTrainedModel, apply_chunking_to_forward
 
 
-logger = logging.getLogger(__name__)
+logger = hf_logging.get_logger()
 
 _CONFIG_FOR_DOC = "ReformerConfig"
 _TOKENIZER_FOR_DOC = "ReformerTokenizer"

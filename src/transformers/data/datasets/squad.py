@@ -1,4 +1,3 @@
-import logging
 import os
 import time
 from dataclasses import dataclass, field
@@ -9,12 +8,14 @@ import torch
 from filelock import FileLock
 from torch.utils.data.dataset import Dataset
 
+import hf_logging
+
 from ...modeling_auto import MODEL_FOR_QUESTION_ANSWERING_MAPPING
 from ...tokenization_utils import PreTrainedTokenizer
 from ..processors.squad import SquadFeatures, SquadV1Processor, SquadV2Processor, squad_convert_examples_to_features
 
 
-logger = logging.getLogger(__name__)
+logger = hf_logging.get_logger()
 
 MODEL_CONFIG_CLASSES = list(MODEL_FOR_QUESTION_ANSWERING_MAPPING.keys())
 MODEL_TYPES = tuple(conf.model_type for conf in MODEL_CONFIG_CLASSES)

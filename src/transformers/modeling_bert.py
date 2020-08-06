@@ -16,7 +16,6 @@
 """PyTorch BERT model. """
 
 
-import logging
 import math
 import os
 import warnings
@@ -27,6 +26,8 @@ import torch
 import torch.utils.checkpoint
 from torch import nn
 from torch.nn import CrossEntropyLoss, MSELoss
+
+import hf_logging
 
 from .activations import gelu, gelu_new, swish
 from .configuration_bert import BertConfig
@@ -51,7 +52,7 @@ from .modeling_outputs import (
 from .modeling_utils import PreTrainedModel, find_pruneable_heads_and_indices, prune_linear_layer
 
 
-logger = logging.getLogger(__name__)
+logger = hf_logging.get_logger()
 
 _CONFIG_FOR_DOC = "BertConfig"
 _TOKENIZER_FOR_DOC = "BertTokenizer"

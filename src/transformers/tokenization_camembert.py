@@ -15,7 +15,6 @@
 """ Tokenization classes for Camembert model."""
 
 
-import logging
 import os
 from shutil import copyfile
 from typing import List, Optional
@@ -26,7 +25,8 @@ from .tokenization_utils import PreTrainedTokenizer
 from .tokenization_xlnet import SPIECE_UNDERLINE
 
 
-logger = logging.getLogger(__name__)
+import hf_logging
+logger = hf_logging.get_logger()
 
 VOCAB_FILES_NAMES = {"vocab_file": "sentencepiece.bpe.model"}
 

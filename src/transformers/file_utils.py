@@ -6,7 +6,6 @@ Copyright by the AllenNLP authors.
 
 import fnmatch
 import json
-import logging
 import os
 import re
 import shutil
@@ -28,10 +27,12 @@ import requests
 from filelock import FileLock
 from tqdm.auto import tqdm
 
+import hf_logging
+
 from . import __version__
 
 
-logger = logging.getLogger(__name__)  # pylint: disable=invalid-name
+logger = hf_logging.get_logger()  # pylint: disable=invalid-name
 
 try:
     USE_TF = os.environ.get("USE_TF", "AUTO").upper()
@@ -733,7 +734,7 @@ def http_get(url, temp_file, proxies=None, resume_size=0, user_agent: Union[Dict
         total=total,
         initial=resume_size,
         desc="Downloading",
-        disable=bool(logger.getEffectiveLevel() == logging.NOTSET),
+        disable=bool(logger.getEffectiveLevel() == hf_logging.NOTSET),
     )
     for chunk in response.iter_content(chunk_size=1024):
         if chunk:  # filter out keep-alive new chunks

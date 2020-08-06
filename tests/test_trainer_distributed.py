@@ -14,14 +14,14 @@
 #
 
 
-import logging
 import sys
 from typing import Dict
 
+import hf_logging
 from transformers import EvalPrediction, HfArgumentParser, TrainingArguments, is_torch_available
 
 
-logger = logging.getLogger(__name__)
+logger = hf_logging.get_logger()
 
 
 if is_torch_available():

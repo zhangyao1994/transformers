@@ -1,9 +1,10 @@
 import dataclasses
 import json
-import logging
 import os
 from dataclasses import dataclass, field
 from typing import Any, Dict, Optional, Tuple
+
+import hf_logging
 
 from .file_utils import cached_property, is_torch_available, is_torch_tpu_available, torch_required
 
@@ -15,7 +16,7 @@ if is_torch_tpu_available():
     import torch_xla.core.xla_model as xm
 
 
-logger = logging.getLogger(__name__)
+logger = hf_logging.get_logger()
 
 
 def default_logdir() -> str:

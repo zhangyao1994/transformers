@@ -16,7 +16,6 @@
 
 
 import collections
-import logging
 import os
 import unicodedata
 from typing import Optional
@@ -24,7 +23,8 @@ from typing import Optional
 from .tokenization_bert import BasicTokenizer, BertTokenizer, WordpieceTokenizer, load_vocab
 
 
-logger = logging.getLogger(__name__)
+import hf_logging
+logger = hf_logging.get_logger()
 
 VOCAB_FILES_NAMES = {"vocab_file": "vocab.txt"}
 

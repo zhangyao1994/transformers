@@ -15,7 +15,6 @@
 # limitations under the License.
 
 import inspect
-import logging
 import os
 import re
 from dataclasses import dataclass
@@ -42,8 +41,8 @@ from .file_utils import (
 )
 from .generation_utils import GenerationMixin
 
-
-logger = logging.getLogger(__name__)
+import hf_logging
+logger = hf_logging.get_logger()
 
 
 try:

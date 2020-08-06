@@ -1,5 +1,4 @@
 import json
-import logging
 import os
 from functools import partial
 from multiprocessing import Pool, cpu_count
@@ -7,10 +6,11 @@ from multiprocessing import Pool, cpu_count
 import numpy as np
 from tqdm import tqdm
 
+import hf_logging
+
 from ...file_utils import is_tf_available, is_torch_available
 from ...tokenization_bert import whitespace_tokenize
 from ...tokenization_utils_base import TruncationStrategy
-from  ...hf_logging import get_verbosity
 from .utils import DataProcessor
 
 
@@ -25,7 +25,7 @@ if is_torch_available():
 if is_tf_available():
     import tensorflow as tf
 
-logger = logging.getLogger(__name__)
+logger = hf_logging.get_logger()
 
 
 def _improve_answer_span(doc_tokens, input_start, input_end, tokenizer, orig_answer_text):
@@ -341,7 +341,7 @@ def squad_convert_examples_to_features(
     """
 
     if tqdm_enabled is None:
-        tqdm_enabled = get_verbosity() <= logging.INFO
+        tqdm_enabled = hf_logging.get_verbosity() <= hf_logging.INFO
 
     # Defining helper methods
     features = []

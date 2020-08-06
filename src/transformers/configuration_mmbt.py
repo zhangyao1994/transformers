@@ -16,11 +16,6 @@
 """ MMBT configuration """
 
 
-import logging
-
-
-logger = logging.getLogger(__name__)
-
 
 class MMBTConfig(object):
     """Configuration class to store the configuration of a `MMBT Model`.

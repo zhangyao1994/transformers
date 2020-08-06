@@ -16,8 +16,6 @@
 """ TF 2.0  XLM-RoBERTa model. """
 
 
-import logging
-
 from .configuration_xlm_roberta import XLMRobertaConfig
 from .file_utils import add_start_docstrings
 from .modeling_tf_roberta import (
@@ -29,8 +27,6 @@ from .modeling_tf_roberta import (
     TFRobertaModel,
 )
 
-
-logger = logging.getLogger(__name__)
 
 TF_XLM_ROBERTA_PRETRAINED_MODEL_ARCHIVE_LIST = [
     # See all XLM-RoBERTa models at https://huggingface.co/models?filter=xlm-roberta

@@ -15,15 +15,16 @@
 """ Tokenization class for model T5."""
 
 
-import logging
 import os
 import re
 from shutil import copyfile
 
+import hf_logging
+
 from .tokenization_utils import PreTrainedTokenizer
 
 
-logger = logging.getLogger(__name__)
+logger = hf_logging.get_logger()
 
 SPIECE_UNDERLINE = "▁"
 

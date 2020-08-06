@@ -16,7 +16,6 @@
 """
 
 
-import logging
 import math
 
 import numpy as np
@@ -43,8 +42,6 @@ from .modeling_tf_utils import (
 )
 from .tokenization_utils import BatchEncoding
 
-
-logger = logging.getLogger(__name__)
 
 _TOKENIZER_FOR_DOC = "DistilBertTokenizer"
 

@@ -15,7 +15,6 @@
 """ Auto Model class. """
 
 
-import logging
 import warnings
 from collections import OrderedDict
 
@@ -135,9 +134,6 @@ from .modeling_tf_xlnet import (
     TFXLNetLMHeadModel,
     TFXLNetModel,
 )
-
-
-logger = logging.getLogger(__name__)
 
 
 TF_MODEL_MAPPING = OrderedDict(

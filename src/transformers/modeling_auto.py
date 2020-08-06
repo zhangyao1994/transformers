@@ -15,7 +15,6 @@
 """ Auto Model class. """
 
 
-import logging
 import warnings
 from collections import OrderedDict
 
@@ -166,9 +165,6 @@ from .modeling_xlnet import (
     XLNetLMHeadModel,
     XLNetModel,
 )
-
-
-logger = logging.getLogger(__name__)
 
 
 MODEL_MAPPING = OrderedDict(

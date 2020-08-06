@@ -13,12 +13,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import logging
+import hf_logging
 
 from .tokenization_roberta import RobertaTokenizer, RobertaTokenizerFast
 
 
-logger = logging.getLogger(__name__)
+logger = hf_logging.get_logger()
 
 
 # vocab and merges same as roberta

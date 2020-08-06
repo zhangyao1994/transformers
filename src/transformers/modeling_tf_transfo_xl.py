@@ -17,8 +17,6 @@
 """
 
 
-import logging
-
 import tensorflow as tf
 
 from .configuration_transfo_xl import TransfoXLConfig
@@ -27,8 +25,6 @@ from .modeling_tf_transfo_xl_utilities import TFAdaptiveSoftmaxMask
 from .modeling_tf_utils import TFPreTrainedModel, get_initializer, keras_serializable, shape_list
 from .tokenization_utils import BatchEncoding
 
-
-logger = logging.getLogger(__name__)
 
 _TOKENIZER_FOR_DOC = "TransfoXLTokenizer"
 

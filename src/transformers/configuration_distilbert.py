@@ -15,12 +15,9 @@
 """ DistilBERT model configuration """
 
 
-import logging
 
 from .configuration_utils import PretrainedConfig
 
-
-logger = logging.getLogger(__name__)
 
 DISTILBERT_PRETRAINED_CONFIG_ARCHIVE_MAP = {
     "distilbert-base-uncased": "https://s3.amazonaws.com/models.huggingface.co/bert/distilbert-base-uncased-config.json",

@@ -19,7 +19,6 @@
 
 
 import copy
-import logging
 import math
 import warnings
 
@@ -46,8 +45,6 @@ from .modeling_outputs import (
 )
 from .modeling_utils import PreTrainedModel, find_pruneable_heads_and_indices, prune_linear_layer
 
-
-logger = logging.getLogger(__name__)
 
 _CONFIG_FOR_DOC = "DistilBertConfig"
 _TOKENIZER_FOR_DOC = "DistilBertTokenizer"

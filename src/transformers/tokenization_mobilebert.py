@@ -14,12 +14,12 @@
 """Tokenization classes for MobileBERT."""
 
 
-import logging
+import hf_logging
 
 from .tokenization_bert import BertTokenizer, BertTokenizerFast
 
 
-logger = logging.getLogger(__name__)
+logger = hf_logging.get_logger()
 
 VOCAB_FILES_NAMES = {"vocab_file": "vocab.txt"}
 

@@ -16,12 +16,8 @@
 """ OpenAI GPT-2 configuration """
 
 
-import logging
-
 from .configuration_utils import PretrainedConfig
 
-
-logger = logging.getLogger(__name__)
 
 GPT2_PRETRAINED_CONFIG_ARCHIVE_MAP = {
     "gpt2": "https://s3.amazonaws.com/models.huggingface.co/bert/gpt2-config.json",

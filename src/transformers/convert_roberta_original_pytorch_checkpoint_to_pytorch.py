@@ -16,7 +16,6 @@
 
 
 import argparse
-import logging
 import pathlib
 
 import fairseq
@@ -25,6 +24,7 @@ from fairseq.models.roberta import RobertaModel as FairseqRobertaModel
 from fairseq.modules import TransformerSentenceEncoderLayer
 from packaging import version
 
+import hf_logging
 from transformers.modeling_bert import BertIntermediate, BertLayer, BertOutput, BertSelfAttention, BertSelfOutput
 from transformers.modeling_roberta import RobertaConfig, RobertaForMaskedLM, RobertaForSequenceClassification
 
@@ -33,8 +33,8 @@ if version.parse(fairseq.__version__) < version.parse("0.9.0"):
     raise Exception("requires fairseq >= 0.9.0")
 
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+logger = hf_logging.get_logger()
+hf_logging.set_verbosity(hf_logging.INFO)
 
 SAMPLE_TEXT = "Hello world! cécé herlolip"
 

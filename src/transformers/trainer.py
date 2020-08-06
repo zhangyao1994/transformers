@@ -1,4 +1,3 @@
-import logging
 import math
 import os
 import re
@@ -17,6 +16,8 @@ from torch.utils.data.dataset import Dataset
 from torch.utils.data.distributed import DistributedSampler
 from torch.utils.data.sampler import RandomSampler, Sampler, SequentialSampler
 from tqdm.auto import tqdm, trange
+
+import hf_logging
 
 from .data.data_collator import DataCollator, default_data_collator
 from .file_utils import is_torch_tpu_available
@@ -74,7 +75,7 @@ if is_wandb_available():
     import wandb
 
 
-logger = logging.getLogger(__name__)
+logger = hf_logging.get_logger()
 
 
 @contextmanager
