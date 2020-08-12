@@ -7,7 +7,6 @@ import numpy as np
 from tqdm import tqdm
 
 from ... import hf_logging
-
 from ...file_utils import is_tf_available, is_torch_available
 from ...tokenization_bert import whitespace_tokenize
 from ...tokenization_utils_base import TruncationStrategy

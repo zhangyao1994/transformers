@@ -15,11 +15,10 @@
 """ XLM configuration """
 
 
-
+from . import hf_logging
 from .configuration_utils import PretrainedConfig
 
 
-from . import hf_logging
 logger = hf_logging.get_logger()
 
 XLM_PRETRAINED_CONFIG_ARCHIVE_MAP = {

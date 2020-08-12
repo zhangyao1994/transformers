@@ -25,7 +25,6 @@ from tokenizers.decoders import Decoder as DecoderFast
 from tokenizers.implementations import BaseTokenizer as BaseTokenizerFast
 
 from . import hf_logging
-
 from .file_utils import add_end_docstrings
 from .tokenization_utils_base import (
     INIT_TOKENIZER_DOCSTRING,

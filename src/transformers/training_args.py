@@ -5,7 +5,6 @@ from dataclasses import dataclass, field
 from typing import Any, Dict, Optional, Tuple
 
 from . import hf_logging
-
 from .file_utils import cached_property, is_torch_available, is_torch_tpu_available, torch_required
 
 

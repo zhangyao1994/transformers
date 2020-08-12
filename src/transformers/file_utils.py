@@ -27,9 +27,7 @@ import requests
 from filelock import FileLock
 from tqdm.auto import tqdm
 
-from . import hf_logging
-
-from . import __version__
+from . import __version__, hf_logging
 
 
 logger = hf_logging.get_logger()  # pylint: disable=invalid-name

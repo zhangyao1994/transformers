@@ -16,7 +16,6 @@
 """ OpenAI GPT configuration """
 
 
-
 from .configuration_utils import PretrainedConfig
 
 

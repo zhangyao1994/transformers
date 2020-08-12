@@ -19,6 +19,7 @@ import copy
 import json
 import os
 
+from . import hf_logging
 from .configuration_auto import ALL_PRETRAINED_CONFIG_ARCHIVE_MAP
 from .file_utils import (
     CONFIG_NAME,
@@ -31,7 +32,6 @@ from .file_utils import (
 )
 
 
-from . import hf_logging
 logger = hf_logging.get_logger()
 
 

@@ -23,7 +23,6 @@ from typing import List, Optional
 from tokenizers import BertWordPieceTokenizer
 
 from . import hf_logging
-
 from .tokenization_utils import PreTrainedTokenizer, _is_control, _is_punctuation, _is_whitespace
 from .tokenization_utils_fast import PreTrainedTokenizerFast
 

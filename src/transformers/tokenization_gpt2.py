@@ -23,7 +23,6 @@ import regex as re
 from tokenizers import ByteLevelBPETokenizer
 
 from . import hf_logging
-
 from .tokenization_utils import AddedToken, PreTrainedTokenizer
 from .tokenization_utils_base import BatchEncoding
 from .tokenization_utils_fast import PreTrainedTokenizerFast

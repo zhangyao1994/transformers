@@ -7,6 +7,7 @@ import torch
 import torch.nn as nn
 from torch.nn import CrossEntropyLoss, MSELoss
 
+from . import hf_logging
 from .activations import get_activation
 from .configuration_electra import ElectraConfig
 from .file_utils import (
@@ -28,7 +29,6 @@ from .modeling_outputs import (
 from .modeling_utils import SequenceSummary
 
 
-from . import hf_logging
 logger = hf_logging.get_logger()
 
 _CONFIG_FOR_DOC = "ElectraConfig"

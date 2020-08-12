@@ -21,7 +21,6 @@ from dataclasses import dataclass
 from typing import List, Optional, Union
 
 from ... import hf_logging
-
 from ...file_utils import is_tf_available, is_torch_available
 
 

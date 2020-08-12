@@ -14,7 +14,6 @@
 # limitations under the License.
 
 from . import hf_logging
-
 from .tokenization_roberta import RobertaTokenizer, RobertaTokenizerFast
 
 

@@ -27,7 +27,6 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 from . import hf_logging
-
 from .configuration_transfo_xl import TransfoXLConfig
 from .file_utils import ModelOutput, add_code_sample_docstrings, add_start_docstrings, add_start_docstrings_to_callable
 from .modeling_transfo_xl_utilities import ProjectedAdaptiveLogSoftmax

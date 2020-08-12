@@ -22,7 +22,6 @@ import unicodedata
 from typing import Any, Dict, List, Optional, Tuple, Union
 
 from . import hf_logging
-
 from .file_utils import add_end_docstrings
 from .tokenization_utils_base import (
     ENCODE_KWARGS_DOCSTRING,

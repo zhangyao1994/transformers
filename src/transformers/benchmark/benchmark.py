@@ -29,6 +29,7 @@ from transformers import (
     is_torch_available,
 )
 
+from .. import hf_logging
 from .benchmark_utils import (
     Benchmark,
     Memory,
@@ -48,7 +49,7 @@ if is_py3nvml_available():
     import py3nvml.py3nvml as nvml
 
 
-from .. import hf_logging
+
 logger = hf_logging.get_logger()
 
 

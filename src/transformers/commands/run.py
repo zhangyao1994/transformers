@@ -1,8 +1,9 @@
 from argparse import ArgumentParser
 
-from ... import hf_logging
 from transformers.commands import BaseTransformersCLICommand
 from transformers.pipelines import SUPPORTED_TASKS, Pipeline, PipelineDataFormat, pipeline
+
+from ... import hf_logging
 
 
 logger = hf_logging.get_logger()  # pylint: disable=invalid-name

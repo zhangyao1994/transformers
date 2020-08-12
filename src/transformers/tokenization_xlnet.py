@@ -20,10 +20,10 @@ import unicodedata
 from shutil import copyfile
 from typing import List, Optional
 
+from . import hf_logging
 from .tokenization_utils import PreTrainedTokenizer
 
 
-from . import hf_logging
 logger = hf_logging.get_logger()
 
 VOCAB_FILES_NAMES = {"vocab_file": "spiece.model"}

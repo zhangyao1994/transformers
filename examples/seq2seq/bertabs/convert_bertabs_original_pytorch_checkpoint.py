@@ -24,10 +24,11 @@ from collections import namedtuple
 
 import torch
 
-from . import hf_logging
 from model_bertabs import BertAbsSummarizer
 from models.model_builder import AbsSummarizer  # The authors' implementation
 from transformers import BertTokenizer
+
+from . import hf_logging
 
 
 logger = hf_logging.get_logger()

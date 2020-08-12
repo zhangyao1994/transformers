@@ -33,6 +33,7 @@ from tokenizers.normalizers import Lowercase, Sequence, Strip, unicode_normalize
 from tokenizers.pre_tokenizers import CharDelimiterSplit, WhitespaceSplit
 from tokenizers.processors import BertProcessing
 
+from . import hf_logging
 from .file_utils import cached_path, is_torch_available
 from .tokenization_utils import PreTrainedTokenizer
 from .tokenization_utils_fast import PreTrainedTokenizerFast
@@ -42,7 +43,7 @@ if is_torch_available():
     import torch
 
 
-from . import hf_logging
+
 logger = hf_logging.get_logger()
 
 VOCAB_FILES_NAMES = {"pretrained_vocab_file": "vocab.bin", "vocab_file": "vocab.txt"}

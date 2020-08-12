@@ -29,7 +29,6 @@ from torch.autograd.function import Function
 from torch.nn import CrossEntropyLoss, MSELoss
 
 from . import hf_logging
-
 from .activations import gelu, gelu_fast, gelu_new, swish
 from .configuration_reformer import ReformerConfig
 from .file_utils import (

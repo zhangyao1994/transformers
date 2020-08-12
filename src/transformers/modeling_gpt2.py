@@ -26,7 +26,6 @@ import torch.nn as nn
 from torch.nn import CrossEntropyLoss
 
 from . import hf_logging
-
 from .activations import ACT2FN
 from .configuration_gpt2 import GPT2Config
 from .file_utils import (

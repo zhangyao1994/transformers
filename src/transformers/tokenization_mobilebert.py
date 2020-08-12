@@ -15,7 +15,6 @@
 
 
 from . import hf_logging
-
 from .tokenization_bert import BertTokenizer, BertTokenizerFast
 
 

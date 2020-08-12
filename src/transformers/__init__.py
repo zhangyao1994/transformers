@@ -17,6 +17,8 @@ else:
     absl.logging.set_stderrthreshold("info")
     absl.logging._warn_preinit_stderr = False
 
+from . import hf_logging
+
 # Configurations
 from .configuration_albert import ALBERT_PRETRAINED_CONFIG_ARCHIVE_MAP, AlbertConfig
 from .configuration_auto import ALL_PRETRAINED_CONFIG_ARCHIVE_MAP, CONFIG_MAPPING, AutoConfig
@@ -170,7 +172,6 @@ from .training_args import TrainingArguments
 from .training_args_tf import TFTrainingArguments
 
 
-from . import hf_logging
 logger = hf_logging.get_logger()
 
 

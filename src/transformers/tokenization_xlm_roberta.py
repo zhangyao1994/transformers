@@ -20,7 +20,6 @@ from shutil import copyfile
 from typing import List, Optional
 
 from . import hf_logging
-
 from .tokenization_utils import PreTrainedTokenizer
 from .tokenization_xlnet import SPIECE_UNDERLINE
 

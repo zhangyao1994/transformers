@@ -14,8 +14,9 @@ import math
 import re
 import string
 
-from ... import hf_logging
 from transformers.tokenization_bert import BasicTokenizer
+
+from ... import hf_logging
 
 
 logger = hf_logging.get_logger()

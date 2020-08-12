@@ -17,8 +17,7 @@
 import sys
 from typing import Dict
 
-from . import hf_logging
-from transformers import EvalPrediction, HfArgumentParser, TrainingArguments, is_torch_available
+from transformers import EvalPrediction, HfArgumentParser, TrainingArguments, hf_logging, is_torch_available
 
 
 logger = hf_logging.get_logger()

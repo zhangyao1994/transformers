@@ -16,7 +16,6 @@
 """ MMBT configuration """
 
 
-
 class MMBTConfig(object):
     """Configuration class to store the configuration of a `MMBT Model`.
 
