@@ -26,9 +26,7 @@ import torch
 
 from model_bertabs import BertAbsSummarizer
 from models.model_builder import AbsSummarizer  # The authors' implementation
-from transformers import BertTokenizer
-
-from . import hf_logging
+from transformers import BertTokenizer, hf_logging
 
 
 logger = hf_logging.get_logger()
@@ -98,7 +96,7 @@ def convert_bertabs_checkpoints(path_to_checkpoints, dump_path):
     # Convert the weights
     # -------------------
 
-    logging.info("convert the model")
+    logger.info("convert the model")
     new_model.bert.load_state_dict(original.bert.state_dict())
     new_model.decoder.load_state_dict(original.decoder.state_dict())
     new_model.generator.load_state_dict(original.generator.state_dict())
@@ -107,7 +105,7 @@ def convert_bertabs_checkpoints(path_to_checkpoints, dump_path):
     # Make sure the outpus are identical
     # ----------------------------------
 
-    logging.info("Make sure that the models' outputs are identical")
+    logger.info("Make sure that the models' outputs are identical")
     tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
 
     # prepare the model inputs
@@ -150,13 +148,13 @@ def convert_bertabs_checkpoints(path_to_checkpoints, dump_path):
 
     are_identical = torch.allclose(output_converted_model, output_original_model, atol=1e-3)
     if are_identical:
-        logging.info("all weights are equal up to 1e-3")
+        logger.info("all weights are equal up to 1e-3")
     else:
         raise ValueError("the weights are different. The new model is likely different from the original one.")
 
     # The model has been saved with torch.save(model) and this is bound to the exact
     # directory structure. We save the state_dict instead.
-    logging.info("saving the model's state dictionary")
+    logger.info("saving the model's state dictionary")
     torch.save(
         new_model.state_dict(), "./bertabs-finetuned-cnndm-extractive-abstractive-summarization/pytorch_model.bin"
     )

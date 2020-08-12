@@ -43,7 +43,6 @@ if is_torch_available():
     import torch
 
 
-
 logger = hf_logging.get_logger()
 
 VOCAB_FILES_NAMES = {"pretrained_vocab_file": "vocab.bin", "vocab_file": "vocab.txt"}

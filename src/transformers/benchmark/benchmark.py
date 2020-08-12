@@ -49,7 +49,6 @@ if is_py3nvml_available():
     import py3nvml.py3nvml as nvml
 
 
-
 logger = hf_logging.get_logger()
 
 
