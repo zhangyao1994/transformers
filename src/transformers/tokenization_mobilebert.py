@@ -14,7 +14,7 @@
 """Tokenization classes for MobileBERT."""
 
 
-import hf_logging
+from . import hf_logging
 
 from .tokenization_bert import BertTokenizer, BertTokenizerFast
 

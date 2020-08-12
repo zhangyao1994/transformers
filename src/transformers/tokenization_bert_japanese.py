@@ -23,7 +23,7 @@ from typing import Optional
 from .tokenization_bert import BasicTokenizer, BertTokenizer, WordpieceTokenizer, load_vocab
 
 
-import hf_logging
+from . import hf_logging
 logger = hf_logging.get_logger()
 
 VOCAB_FILES_NAMES = {"vocab_file": "vocab.txt"}

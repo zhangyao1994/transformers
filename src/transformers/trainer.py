@@ -17,7 +17,7 @@ from torch.utils.data.distributed import DistributedSampler
 from torch.utils.data.sampler import RandomSampler, Sampler, SequentialSampler
 from tqdm.auto import tqdm, trange
 
-import hf_logging
+from . import hf_logging
 
 from .data.data_collator import DataCollator, default_data_collator
 from .file_utils import is_torch_tpu_available

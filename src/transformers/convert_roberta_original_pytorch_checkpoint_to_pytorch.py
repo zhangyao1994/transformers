@@ -24,7 +24,7 @@ from fairseq.models.roberta import RobertaModel as FairseqRobertaModel
 from fairseq.modules import TransformerSentenceEncoderLayer
 from packaging import version
 
-import hf_logging
+from . import hf_logging
 from transformers.modeling_bert import BertIntermediate, BertLayer, BertOutput, BertSelfAttention, BertSelfOutput
 from transformers.modeling_roberta import RobertaConfig, RobertaForMaskedLM, RobertaForSequenceClassification
 

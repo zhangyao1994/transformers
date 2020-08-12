@@ -23,7 +23,7 @@ from typing import List, Optional
 from .tokenization_utils import PreTrainedTokenizer
 
 
-import hf_logging
+from . import hf_logging
 logger = hf_logging.get_logger()
 
 VOCAB_FILES_NAMES = {"vocab_file": "spiece.model"}

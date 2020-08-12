@@ -22,7 +22,7 @@ from functools import lru_cache
 import regex as re
 from tokenizers import ByteLevelBPETokenizer
 
-import hf_logging
+from . import hf_logging
 
 from .tokenization_utils import AddedToken, PreTrainedTokenizer
 from .tokenization_utils_base import BatchEncoding

@@ -23,7 +23,7 @@ import warnings
 
 import tensorflow as tf
 
-import hf_logging
+from . import hf_logging
 
 from .configuration_t5 import T5Config
 from .file_utils import DUMMY_INPUTS, DUMMY_MASK, add_start_docstrings, add_start_docstrings_to_callable

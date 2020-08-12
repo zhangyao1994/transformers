@@ -24,7 +24,7 @@ from collections import namedtuple
 
 import torch
 
-import hf_logging
+from . import hf_logging
 from model_bertabs import BertAbsSummarizer
 from models.model_builder import AbsSummarizer  # The authors' implementation
 from transformers import BertTokenizer

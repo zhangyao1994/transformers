@@ -8,7 +8,7 @@ import torch
 from filelock import FileLock
 from torch.utils.data.dataset import Dataset
 
-import hf_logging
+from ... import hf_logging
 
 from ...modeling_auto import MODEL_FOR_QUESTION_ANSWERING_MAPPING
 from ...tokenization_utils import PreTrainedTokenizer

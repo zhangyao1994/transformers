@@ -27,7 +27,7 @@ import requests
 from filelock import FileLock
 from tqdm.auto import tqdm
 
-import hf_logging
+from . import hf_logging
 
 from . import __version__
 

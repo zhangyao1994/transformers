@@ -19,7 +19,7 @@ import unicodedata
 
 import six
 
-import hf_logging
+from . import hf_logging
 
 from .tokenization_xlm import XLMTokenizer
 

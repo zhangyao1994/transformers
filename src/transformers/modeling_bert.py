@@ -27,7 +27,7 @@ import torch.utils.checkpoint
 from torch import nn
 from torch.nn import CrossEntropyLoss, MSELoss
 
-import hf_logging
+from . import hf_logging
 
 from .activations import gelu, gelu_new, swish
 from .configuration_bert import BertConfig

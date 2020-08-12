@@ -21,7 +21,7 @@ import re
 
 from tokenizers import CharBPETokenizer
 
-import hf_logging
+from . import hf_logging
 
 from .tokenization_bert import BasicTokenizer
 from .tokenization_utils import PreTrainedTokenizer

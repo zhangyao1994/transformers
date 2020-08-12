@@ -28,7 +28,7 @@ from .modeling_outputs import (
 from .modeling_utils import SequenceSummary
 
 
-import hf_logging
+from . import hf_logging
 logger = hf_logging.get_logger()
 
 _CONFIG_FOR_DOC = "ElectraConfig"

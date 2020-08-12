@@ -170,7 +170,7 @@ from .training_args import TrainingArguments
 from .training_args_tf import TFTrainingArguments
 
 
-import hf_logging
+from . import hf_logging
 logger = hf_logging.get_logger()
 
 

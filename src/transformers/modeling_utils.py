@@ -41,7 +41,7 @@ from .file_utils import (
 )
 from .generation_utils import GenerationMixin
 
-import hf_logging
+from . import hf_logging
 logger = hf_logging.get_logger()
 
 

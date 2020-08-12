@@ -1,6 +1,6 @@
 from argparse import ArgumentParser
 
-import hf_logging
+from ... import hf_logging
 from transformers.commands import BaseTransformersCLICommand
 from transformers.pipelines import SUPPORTED_TASKS, Pipeline, PipelineDataFormat, pipeline
 

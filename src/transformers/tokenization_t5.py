@@ -19,7 +19,7 @@ import os
 import re
 from shutil import copyfile
 
-import hf_logging
+from . import hf_logging
 
 from .tokenization_utils import PreTrainedTokenizer
 

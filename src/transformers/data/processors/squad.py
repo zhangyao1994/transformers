@@ -6,7 +6,7 @@ from multiprocessing import Pool, cpu_count
 import numpy as np
 from tqdm import tqdm
 
-import hf_logging
+from ... import hf_logging
 
 from ...file_utils import is_tf_available, is_torch_available
 from ...tokenization_bert import whitespace_tokenize

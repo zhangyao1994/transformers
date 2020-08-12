@@ -37,7 +37,7 @@ from .modeling_outputs import BaseModelOutput, BaseModelOutputWithPast, Seq2SeqL
 from .modeling_utils import PreTrainedModel, find_pruneable_heads_and_indices, prune_linear_layer
 
 
-import hf_logging
+from . import hf_logging
 logger = hf_logging.get_logger()
 
 _CONFIG_FOR_DOC = "T5Config"

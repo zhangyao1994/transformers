@@ -20,7 +20,7 @@ import os
 
 import regex as re
 
-import hf_logging
+from . import hf_logging
 
 from .tokenization_utils import PreTrainedTokenizer
 

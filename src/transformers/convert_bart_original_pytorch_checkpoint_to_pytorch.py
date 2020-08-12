@@ -23,7 +23,7 @@ import fairseq
 import torch
 from packaging import version
 
-import hf_logging
+from . import hf_logging
 from transformers import (
     BartConfig,
     BartForConditionalGeneration,

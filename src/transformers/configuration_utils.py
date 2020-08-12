@@ -24,7 +24,7 @@ from typing import Any, Dict, Tuple
 from .file_utils import CONFIG_NAME, cached_path, hf_bucket_url, is_remote_url
 
 
-import hf_logging
+from . import hf_logging
 logger = hf_logging.get_logger()
 
 

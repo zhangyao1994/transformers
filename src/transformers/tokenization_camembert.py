@@ -25,7 +25,7 @@ from .tokenization_utils import PreTrainedTokenizer
 from .tokenization_xlnet import SPIECE_UNDERLINE
 
 
-import hf_logging
+from . import hf_logging
 logger = hf_logging.get_logger()
 
 VOCAB_FILES_NAMES = {"vocab_file": "sentencepiece.bpe.model"}

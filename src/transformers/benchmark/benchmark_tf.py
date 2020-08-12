@@ -49,7 +49,7 @@ if is_tf_available():
 if is_py3nvml_available():
     import py3nvml.py3nvml as nvml
 
-import hf_logging
+from .. import hf_logging
 logger = hf_logging.get_logger()
 
 

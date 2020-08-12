@@ -6,7 +6,7 @@ import torch
 from filelock import FileLock
 from torch.utils.data.dataset import Dataset
 
-import hf_logging
+from ... import hf_logging
 
 from ...tokenization_utils import PreTrainedTokenizer
 

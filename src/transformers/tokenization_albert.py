@@ -20,7 +20,7 @@ import unicodedata
 from shutil import copyfile
 from typing import List, Optional
 
-import hf_logging
+from . import hf_logging
 
 from .tokenization_utils import PreTrainedTokenizer
 

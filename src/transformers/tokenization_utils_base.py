@@ -30,7 +30,7 @@ import numpy as np
 from tokenizers import AddedToken
 from tokenizers import Encoding as EncodingFast
 
-import hf_logging
+from . import hf_logging
 
 from .file_utils import (
     add_end_docstrings,
